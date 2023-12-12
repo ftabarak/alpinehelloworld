@@ -12,7 +12,7 @@ WORKDIR /home/fahd
 
 COPY --chown=fahd: ./webapp/requirements.txt requirements.txt
 
-RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
+RUN pip3 install --no-cache-dir -q -r requirements.txt
 
 # Add our code
 ADD ./webapp /home/fahd/
