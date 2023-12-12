@@ -11,7 +11,10 @@ WORKDIR /home/fahd
 # Install dependencies
 
 COPY --chown=fahd: ./webapp/requirements.txt requirements.txt
-RUN pip install --root-user-action=ignore -r requirements.txt
+RUN python -m venv .venv
+RUN ./venv/bin/activate
+RUN pip install -r requirements.txt
+
 # Add our code
 ADD ./webapp /home/fahd/
 ENV PATH="/home/myuser/.local/bin:${PATH}"
