@@ -2,7 +2,7 @@
 FROM python:3.13.0a2-alpine
 
 #Install python and pip
-ADD ./requirements.txt requirements.txt
+ADD ./webapp/requirements.txt requirements.txt
 
 #Install dependencies
 RUN pip3 install --no-cache-dir -q -r requirements.txt
