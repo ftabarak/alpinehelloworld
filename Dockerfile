@@ -14,7 +14,8 @@ COPY --chown=fahd: ./webapp/requirements.txt requirements.txt
 RUN pip install --root-user-action=ignore -r requirements.txt
 # Add our code
 ADD ./webapp /home/fahd/
-
+ENV PATH="/home/myuser/.local/bin:${PATH}"
+COPY --chown=myuser:myuser . .
 # Expose is NOT supported by Heroku
 # EXPOSE 5000 		
 
