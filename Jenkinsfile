@@ -11,7 +11,7 @@ pipeline {
              agent any
              steps {
                 script {
-                  sh 'docker build -t ftabarak/$IMAGE_NAME:$IMAGE_TAG .'
+                  sh 'docker build -t ftabarak/alpinehelloworld .'
                 }
              }
         }
